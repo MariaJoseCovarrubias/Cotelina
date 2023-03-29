@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Card, Button, Container, Pagination, Col, Row, Dropdown
+  Card, Button, Container, Pagination, Col, Row
 } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'; 
 
@@ -13,8 +13,8 @@ function SingleMenu() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = plates.slice(indexOfFirstItem, indexOfLastItem);
-  const [sortBy, setSortBy] = useState('name'); // column to use to sort products
-  const [order, setOrder] = useState(1);
+  // const [sortBy, setSortBy] = useState('name'); // column to use to sort products
+  // const [order, setOrder] = useState(1);
 
   const totalPages = Math.ceil( plates.length / itemsPerPage);
   const pages = [];
@@ -40,19 +40,20 @@ function SingleMenu() {
 
   useEffect(() => {
       apiGet();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const handleSortByAttr = async () => {
-        const sortedList = plates.slice(0);
-        sortedList.sort((a, b) => (a[sortBy] > b[sortBy] ? order : -order));
-        setIngredients(sortedList);
-      };
+    // const handleSortByAttr = async () => {
+    //     const sortedList = plates.slice(0);
+    //     sortedList.sort((a, b) => (a[sortBy] > b[sortBy] ? order : -order));
+    //     setIngredients(sortedList);
+    //   };
   
-      const handleNewSort = async (column) => {
-        setSortBy(column);
-        setOrder(-order);
-        handleSortByAttr();
-      };
+    //   const handleNewSort = async (column) => {
+    //     setSortBy(column);
+    //     setOrder(-order);
+    //     handleSortByAttr();
+    //   };
 
     return (
       <div>

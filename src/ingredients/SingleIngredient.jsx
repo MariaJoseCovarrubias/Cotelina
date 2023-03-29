@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Card, Button, Container, Pagination, Col, Row, Dropdown
+  Card, Container, Col, Row, 
 } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'; 
 
@@ -20,6 +20,7 @@ function SingleIngredient() {
 
   useEffect(() => {
       apiGet();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
 
