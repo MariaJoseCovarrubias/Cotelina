@@ -69,6 +69,8 @@ function SingleMenu() {
                 <Card.Text>{ingredients.description}</Card.Text>
                 <Card.Text>Tamaño: {ingredients.size}</Card.Text>
                 <Card.Text>Expiración: {ingredients.expiration}</Card.Text>
+                <Button href={`/reviews/${ingredients.id}`} variant="primary">Reseñas</Button>
+
               </Card.Body>
             </Card>
           </Col>

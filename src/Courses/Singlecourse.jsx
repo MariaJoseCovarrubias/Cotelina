@@ -65,11 +65,12 @@ function SingleCourse() {
               <Card.Body>
                 <Card.Title>Nombre: {ingredients.name}</Card.Title>
                 <Card.Title>Precio: {ingredients.price}</Card.Title>
-                <Card.Title>Categoria: {ingredients.catergory}</Card.Title>
+                <Card.Title>Categoria: {ingredients.category}</Card.Title>
                 <Card.Title>Descripción:</Card.Title>
                 <Card.Text>{ingredients.description}</Card.Text>
                 <Card.Text>Tamaño: {ingredients.size}</Card.Text>
                 <Card.Text>Expiración: {ingredients.expiration}</Card.Text>
+                <Button href={`/reviews/${ingredients.id}`} variant="primary">Reseñas</Button>
               </Card.Body>
             </Card>
           </Col>

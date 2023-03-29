@@ -7,6 +7,7 @@ import MenuDisplay from './menu/menu';
 import SingleMenu from './menu/SingleMenu';
 import CoursesDisplay from './Courses/courses';
 import SingleCourse from './Courses/Singlecourse';
+import Reviews from './Reviews/reviews';
 
 export default function RoutesFunction() {
   return (
@@ -22,6 +23,7 @@ export default function RoutesFunction() {
       <Route path="/menu/:id" element={<SingleMenu />} />
       <Route path="/courses" element={<CoursesDisplay />} />
       <Route path="/courses/:id" element={<SingleCourse />} />
+      <Route path="/reviews/:id" element={<Reviews />} />
     </Routes>
     </div>
 

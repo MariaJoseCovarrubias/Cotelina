@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Card, Container, Col, Row, 
+  Card, Container, Col, Row, Button
 } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'; 
 
@@ -38,6 +38,7 @@ function SingleIngredient() {
                 <Card.Text>{ingredients.description}</Card.Text>
                 <Card.Text>Tamaño: {ingredients.size}</Card.Text>
                 <Card.Text>Expiración: {ingredients.expiration}</Card.Text>
+                <Button href={`/reviews/${ingredients.id}`} variant="primary">Reseñas</Button>
               </Card.Body>
             </Card>
           </Col>
